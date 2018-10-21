@@ -12,7 +12,7 @@ def generate_template(args):
 
     env = ('{' + ', '.join(':'.join(["'" + y + "'" for y in x.split('=')]) for x in args.env) + '}') if args.env else 'os.environ'
     exec_path = args.local if args.local else ''
-    remote_host, remote_port = args.remote.split(':') if args.remote else ('', '')
+    remote_host, remote_port = args.remote.split(':') if args.remote else ('', '0000')
     elfs = ''.join([f'ELF_{i} = ELF("{elf}")'+'\n' for i, elf in enumerate(args.elfs)]) if args.elfs else ''
 
     return \
