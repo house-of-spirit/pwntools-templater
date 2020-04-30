@@ -26,5 +26,5 @@ optional arguments:
 
 ## Installation
 ```
-git clone https://github.com/pql-2000/pwntools-templater
+git clone https://github.com/house-of-spirit/pwntools-templater
 ```
